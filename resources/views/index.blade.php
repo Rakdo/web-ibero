@@ -198,6 +198,14 @@
 																			<option value="Individual">Ayuda exterior</option>
 																		</select>
 															</div>
+																<div class="form-group">
+																		<label>Proyectos</label>
+																		<select class="form-control" name="project_id">
+																		@foreach ($proyectos as $proyecto)
+																		<option value="{{ $proyecto->id }}"> {{ $proyecto->name }} </option>
+																		@endforeach
+																		</select>
+															</div>
 															
 															<div class="form-group">
 																		<label>Fecha de entrega</label>

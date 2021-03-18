@@ -11,4 +11,10 @@ class Project extends Model
 
       protected $fillable =[
     	'name','description','final_date','hex'];
+
+
+    	public function tareas() 
+    	{
+    		return $this->hasMany(Task::class);
+    	}
 }

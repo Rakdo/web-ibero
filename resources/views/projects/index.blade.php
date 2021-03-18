@@ -35,14 +35,83 @@
 				</div>
 				<div class="tareas">
 					<ul>
-						<li>Tarea 1</li>
-						<li>Tarea 2</li>
+						@foreach($proyecto->tareas as $tarea)
+						<li>{{ $tarea->name }}</li>
+						@endforeach
 					</ul>
+
 				</div>
+				<button class="btn-primary btn btn-block" data-bs-toggle="modal" data-bs-target="#AddTaskModal_{{ $proyecto->id }}">Agregar Tarea</button>
 			</div>
 
 		</div>
+ <!-- Edit Modal -->
+<div class="modal fade" id="AddTaskModal_{{ $proyecto->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Agregar tarea</h5>
+        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+     													 <div class="modal-body">
+													 		<div class="container-fluid">
+																<form method="POST" action="{{ route('tareas.store') }}">
+															<!-- Nuestro campo de proteccion de formulario -->
+															{{ csrf_field() }}
+															
+
+															<div class="form-group">
+																<label>Nombre de tarea</label>
+																<input class="form-control" type="text" name="name" placeholder="Nombre de tarea">
+
+															</div>
+															
+															<div class="form-group">
+																<label>Descripcion</label>
+															<textarea class="form-control" name="description"></textarea>
+															</div>
+
+															<div class="form-group">
+																		<label>Modalidad</label>
+																		<select class="form-control" name="modality">
+																			<option value="Individual">Individual</option>
+																			<option value="Individual">Por equipo</option>
+																			<option value="Individual">Ayuda exterior</option>
+																		</select>
+															</div>
+																<div class="form-group">
+																		<label>Proyectos</label>
+																		<select class="form-control" name="project_id" disabled="true">
+																		
+																		<option value="{{ $proyecto->id }}" > {{ $proyecto->name }} </option>
+																		
+																		</select>
+															</div>
+															
+															<div class="form-group">
+																		<label>Fecha de entrega</label>
+																		<input class="form-control" type="date" name="due_date">
+															</div>
+
+
+														</div>
+													      </div>
+
+															<!-- Guardar Formulario -->
+															 <div class="modal-footer">
+       														 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+															<button class="btn btn-success" type="submit">Guardar Tarea</button>
+														</form>
+													</div>
+    </div>
+  </div>
+</div>
 		@endforeach
+</div> 
+		
 </div>
   
  </div>
@@ -53,7 +122,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Crear nueva tarea</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Crear nuevo Proyecto</h5>
         <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close" >
           <span aria-hidden="true">&times;</span>
         </button>
