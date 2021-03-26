@@ -62,7 +62,7 @@
 															<!-- Nuestro campo de proteccion de formulario -->
 															{{ csrf_field() }}
 															
-
+															<input type="hidden" name="user_id" value="{{ Auth::user()->id}}">
 															<div class="form-group">
 																<label>Nombre de tarea</label>
 																<input class="form-control" type="text" name="name" placeholder="Nombre de tarea">

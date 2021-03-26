@@ -2,15 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use Auth;
 use App\Models\Project;
 use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
+     public function __construct()
+    {
+        $this->middleware('auth');
+    }
 
     public function index()
     {
-       $proyectos = Project::all();
+       $proyectos = Project::where('user_id', Auth::user()->id)->get();
 
        return view('projects.index')->with('proyectos', $proyectos);
     }
@@ -26,6 +31,7 @@ class ProjectController extends Controller
     {
      
      $proyectos = Project::create([
+            'user_id'=> Auth::user()->id,
             'name' => $request->name ,
             'description' => $request->description,
             'final_date' => $request->final_date,
