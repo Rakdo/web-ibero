@@ -6,11 +6,11 @@
 
       @guest
       <a  href="/" class="d-flex align-items-right col-8  text-white text-decoration-none ">
-        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0"  height="50">
+        <img src="{{url('css/img/icon.ico')}}" class="rounded-circle z-depth-0"  height="50">
       </a>
       @else
       <a  href="/logged" class="d-flex align-items-right col-2  text-white text-decoration-none ">
-        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0"  height="50">
+        <img src="{{url('css/img/icon.ico')}} " class="rounded-circle z-depth-0"  height="50">
       </a>
       @endguest
 
