@@ -20,6 +20,13 @@ class ProjectController extends Controller
        return view('projects.index')->with('proyectos', $proyectos);
     }
 
+       public function index2()
+    {
+       $proyectos = Project::where('user_id', Auth::user()->id)->get();
+
+       return view('projects.index')->with('proyectos', $proyectos);
+    }
+
 
     public function create()
     {

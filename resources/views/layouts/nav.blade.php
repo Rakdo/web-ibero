@@ -1,50 +1,60 @@
-<header class="px-3 py-2 bg-dark text-white">
 
-  <div class="container">
-    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-      <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none ">
-        App de Tareas
-      
+<header class="px-3 py-2 bg-dark text-white viewport-header">
+
+  <div class="container justify-content-md-center">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start ">
+
+      @guest
+      <a  href="/" class="d-flex align-items-right col-8  text-white text-decoration-none ">
+        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0"  height="50">
       </a>
+      @else
+      <a  href="/logged" class="d-flex align-items-right col-2  text-white text-decoration-none ">
+        <img src="https://mdbootstrap.com/img/Photos/Avatars/avatar-2.jpg" class="rounded-circle z-depth-0"  height="50">
+      </a>
+      @endguest
 
-      <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
-        <li>
+      
+        @guest
+        
           
-            @guest
+            
             @else
-            <a href="/" class="nav-link text-white">
-            <ion-icon class="bi d-block mx-auto mb-1" width="24" height="24" name="home-outline"></ion-icon>
+            <div class="centercontent col-2 " >
+            <a href="/logged" class="nav-link text-white"  >
+            <ion-icon class="bi d-block mx-auto mb-1 "  width="24" height="24" name="home-outline"></ion-icon>
             Vista General
           </a>
-        </li>
-        <li>
-          <a  href="{{route('proyectos.index') }}" class="nav-link text-white">
+         </div>
+        <div class="centercontent col-2 ">
+          <a  href="{{route('proyectos.index') }}" class="nav-link text-white ">
             <ion-icon  class="bi d-block mx-auto mb-1" width="24" height="24" name="folder-outline"></ion-icon>
             Proyectos
           </a>
-        </li>
-        <li>
-          <a href="{{route('tareas.index') }}" class="nav-link text-white">
+        </div>
+        <div class="centercontent col-2 ">
+          <a href="{{route('tareas.index') }}" class="nav-link text-white ">
             <ion-icon class="bi d-block mx-auto mb-1" width="24" height="24" name="clipboard-outline"></ion-icon>
             Tareas
           </a>
-        </li>
+        </div>
         @endguest
         @guest
-         <li>
-          <a  href="{{route('register') }}" class="nav-link text-white">
-         <button type="button" class="btn btn-primary"><ion-icon name="add-circle-outline"></ion-icon>Sign-up</button>
+         <div class=" col-2">
+          <a  href="{{route('register') }}" class="nav-link text-white ">
+         <button type="button" class="btn buttonsregister" ><ion-icon name="add-circle-outline" style="transform: translate(0%, 10%);"></ion-icon> Sign-up</button>
        </a>
-        </li>
-         <li>
-          <a  href="{{route('login') }}"class="nav-link text-white">
-            <button type="button" class="btn btn-light text-dark me-2"><ion-icon name="log-in-outline"></ion-icon>Login</button>
+        </div>
+         <div class="col-2">
+          <a  href="{{route('login') }}"class="nav-link text-white ">
+            <button type="button" class="btn  buttonslogin" ><ion-icon name="log-in-outline"  style="transform: translate(0%, 10%);" ></ion-icon> Login</button>
           </a>
-        </li>
+        </div>
+        
         @else
-        <li>  
-        <div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" >
+          </ul>
+        <div class="dropdown col-2 centercontent" style="text-align: right;">
+  <button class="btn buttonslogin dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" style="border-radius: 20px;">
     {{ Auth::user()->name }}
   </button>
   
@@ -61,12 +71,12 @@
    
   </ul>
 </div>
-</li>
+
     
         @endguest
        
      
-      </ul>
+      
     </div>
   </div>
 </header>

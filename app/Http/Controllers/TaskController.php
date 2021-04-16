@@ -56,14 +56,15 @@ class TaskController extends Controller
     
     public function show($id)
     {
-        $tarea = Task::where('id', $id)->where('user_id', Auth::user()->id->first());
+        $tarea = Task::where('id', $id)->where('user_id', Auth::user()->id)->first();
+
 
         if (empty($tarea)){
             return redirect()->back();
         } else {
             return view('show')->with('tarea',$tarea);
         }
-        return view('show') -> with('tarea', $tarea);
+        
     }
 
     public function edit($id)

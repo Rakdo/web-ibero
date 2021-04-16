@@ -1,0 +1,230 @@
+body {
+font-family: 'Montserrat Alternates', sans-serif;
+ background-color: #cccccc;
+}
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+
+
+.landingdiv {
+transform: translate(0%, 50%);
+border-radius: 25px;
+  background: rgba(192, 192, 192, 0.85);
+  padding: 20px;
+  width: 80%;
+  height: 100%;
+  margin: auto;
+}
+
+.tareadiv {
+	  transform: translate(0%, 20%);
+	border-radius: 25px;
+  background: rgba(192, 192, 192, 0.85);
+  padding: 20px;
+  width: 80%;
+  height: 100%;
+  margin: auto;
+}
+
+.projectdiv {
+	  transform: translate(0%, 5%);
+	border-radius: 25px;
+  background: rgba(192, 192, 192, 0.85);
+  padding: 20px;
+  width: 80%;
+  height: 100%;
+  margin: auto;
+}
+
+.modaldiv {
+	transform: translate(0%, 10%);
+	border-radius: 25px;
+  background: rgba(192, 192, 192, 0.85);
+  padding: 20px;
+  width: 100%;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.modaldivborrar {
+	transform: translate(0%, 25%);
+	border-radius: 25px;
+  background: rgba(192, 192, 192, 0.85);
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+}
+
+.transtalelanding {
+	
+	width: 80%;
+  height: 100%;
+  margin: auto;
+}
+
+.buttonslogin {
+	text-align: center;
+	 margin: auto;
+	 background-color: #545f8c;
+	 color: white;
+}
+
+.buttonsregister {
+	text-align: center;
+	 margin: auto;
+	 background-color: #8c5484;
+	 color: white;
+}
+
+.cardstyle {
+	background: transparent;
+	text-align: center;
+	font-size: 12;
+}
+
+.centercontent {
+	margin: auto;
+    padding: 10px;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.navbuttons {
+	width: 50%;
+	border-radius: 20px;
+	background-color: #8C8462;
+	transition: transform 0.5s;
+	border: none;
+	color: white;
+}
+
+.navbuttons:hover {
+	transform: translateY(-5px);
+	background-color: #8C8462;
+}
+
+.createbtn{
+	width: 50%;
+	height: 50%;
+	border-radius: 20px;
+	transition: transform 0.5s;
+	background-color: #5c8c54;
+	color: white;
+}
+.createbtn:hover {
+	transform: translateY(-5px);
+	
+}
+
+.btnexito {
+	background-color:#5ca08e;
+	border-radius: 20px;
+	transition: transform 0.5s;
+	color: 	#e1e1e1;
+}
+
+.btnexito:hover {
+	transform: translateY(-5px);
+	
+}
+
+.btnincompleto {
+	background-color:#A16C5C;
+	border-radius: 20px;
+	transition: transform 0.5s;
+	color: 	#e1e1e1;
+}
+
+.btnincompleto:hover {
+	transform: translateY(-5px);
+	
+}
+
+.btndetalle {
+	background-color: #9CBCF0;
+	border-radius: 20px;
+	transition: transform 0.5s;
+	
+}
+.btndetalle:hover {
+	transform: translateY(-5px);
+	
+}
+
+.btneditar {
+	background-color: #F0C587;
+	border-radius: 20px;
+	transition: transform 0.5s;
+		
+}
+.btneditar:hover {
+	transform: translateY(-5px);
+	
+}
+
+.btnborrar {
+	background-color:#A36A68;
+	border-radius: 20px;
+	transition: transform 0.5s;
+}
+
+.btnborrar:hover {
+	transform: translateY(-5px);
+	
+}
+
+.btncerrar {
+	background-color:#9C2825;
+	border-radius: 20px;
+	transition: transform 0.5s;
+	color: white;
+}
+.btncerrar:hover {
+	transform: translateY(-5px);
+	
+}
+
+.btnregresar {
+	text-align: center;
+	width: 20%;
+	background-color:#9C2825;
+	border-radius: 20px;
+	transition: transform 0.5s;
+	color: white;
+}
+.btnregresar:hover {
+	transform: translateY(-5px);
+	
+}
+
+.btnagregartarea {
+	text-align: center;
+	
+	background-color:#5C754F;
+	border-radius: 20px;
+	transition: transform 0.5s;
+	color: white;
+}
+.btnagregartarea:hover {
+	transform: translateY(-5px);
+	color: black;
+}
+
+
+.projectcard{
+	background-color:#8C8462 ;
+	color: #DFE6EE;
+
+}
